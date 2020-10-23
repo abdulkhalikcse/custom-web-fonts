@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Custom Web Fonts</title>
+    <link href="http://fonts.googleapis.com/css?family=Dosis:400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="fonts-1.1.css">
+    <style type="text/css">
+      html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+body{line-height:1;color:#000;background:#fff}
+ol,ul{list-style:none}
+table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+a img{border:none}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+body{font-family:'Dosis','Tahoma',sans-serif}
+.container{margin:15px auto;width:80%}
+h1{margin:40px 0 20px;font-weight:700;font-size:38px;line-height:32px;color:#fb565e}
+h2{font-size:18px;padding:0 0 21px 5px;margin:45px 0 0 0;text-transform:uppercase;font-weight:500}
+.small{font-size:14px;color:#a5adb4;}
+.small a{color:#a5adb4;}
+.small a:hover{color:#fb565e}
+.glyphs.character-mapping{margin:0 0 20px 0;padding:20px 0 20px 30px;color:rgba(0,0,0,0.5);border:1px solid #d8e0e5;-webkit-border-radius:3px;border-radius:3px;}
+.glyphs.character-mapping li{margin:0 30px 20px 0;display:inline-block;width:90px}
+.glyphs.character-mapping .icon{margin:10px 0 10px 15px;padding:15px;position:relative;width:55px;height:55px;color:#162a36 !important;overflow:hidden;-webkit-border-radius:3px;border-radius:3px;font-size:32px;}
+.glyphs.character-mapping .icon svg{fill:#000}
+.glyphs.character-mapping input{margin:0;padding:5px 0;line-height:12px;font-size:12px;display:block;width:100%;border:1px solid #d8e0e5;-webkit-border-radius:5px;border-radius:5px;text-align:center;outline:0;}
+.glyphs.character-mapping input:focus{border:1px solid #fbde4a;-webkit-box-shadow:inset 0 0 3px #fbde4a;box-shadow:inset 0 0 3px #fbde4a}
+.glyphs.character-mapping input:hover{-webkit-box-shadow:inset 0 0 3px #fbde4a;box-shadow:inset 0 0 3px #fbde4a}
+.glyphs.css-mapping{margin:0 0 60px 0;padding:30px 0 20px 30px;color:rgba(0,0,0,0.5);border:1px solid #d8e0e5;-webkit-border-radius:3px;border-radius:3px;}
+.glyphs.css-mapping li{margin:0 30px 20px 0;padding:0;display:inline-block;overflow:hidden}
+.glyphs.css-mapping .icon{margin:0;margin-right:10px;padding:13px;height:50px;width:50px;color:#162a36 !important;overflow:hidden;float:left;font-size:24px}
+.glyphs.css-mapping input{margin:0;margin-top:5px;padding:8px;line-height:16px;font-size:16px;display:block;width:150px;height:40px;border:1px solid #d8e0e5;-webkit-border-radius:5px;border-radius:5px;background:#fff;outline:0;float:right;}
+.glyphs.css-mapping input:focus{border:1px solid #fbde4a;-webkit-box-shadow:inset 0 0 3px #fbde4a;box-shadow:inset 0 0 3px #fbde4a}
+.glyphs.css-mapping input:hover{-webkit-box-shadow:inset 0 0 3px #fbde4a;box-shadow:inset 0 0 3px #fbde4a}
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Custom Fonts</h1>
+      <p class="small">This font was designed using adobe illustrator and created with <a href="http://fontastic.me/">Fontastic</a></p>
+      <h2>CSS mapping</h2>
+      <ul class="glyphs css-mapping">
+        <li>
+          <div class="icon icon-graph"></div>
+          <input type="text" readonly="readonly" value="graph">
+        </li>
+        <li>
+          <div class="icon icon-pictures"></div>
+          <input type="text" readonly="readonly" value="pictures">
+        </li>
+        <li>
+          <div class="icon icon-picture-single"></div>
+          <input type="text" readonly="readonly" value="picture-single">
+        </li>
+        <li>
+          <div class="icon icon-map-user"></div>
+          <input type="text" readonly="readonly" value="map-user">
+        </li>
+        <li>
+          <div class="icon icon-male-female"></div>
+          <input type="text" readonly="readonly" value="male-female">
+        </li>
+        <li>
+          <div class="icon icon-vcard"></div>
+          <input type="text" readonly="readonly" value="vcard">
+        </li>
+        <li>
+          <div class="icon icon-water"></div>
+          <input type="text" readonly="readonly" value="water">
+        </li>
+        <li>
+          <div class="icon icon-user-add"></div>
+          <input type="text" readonly="readonly" value="user-add">
+        </li>
+        <li>
+          <div class="icon icon-cooking-1"></div>
+          <input type="text" readonly="readonly" value="cooking-1">
+        </li>
+        <li>
+          <div class="icon icon-rupi"></div>
+          <input type="text" readonly="readonly" value="rupi">
+        </li>
+        <li>
+          <div class="icon icon-ac"></div>
+          <input type="text" readonly="readonly" value="ac">
+        </li>
+        <li>
+          <div class="icon icon-text-file"></div>
+          <input type="text" readonly="readonly" value="text-file">
+        </li>
+        <li>
+          <div class="icon icon-popcorn"></div>
+          <input type="text" readonly="readonly" value="popcorn">
+        </li>
+        <li>
+          <div class="icon icon-pot"></div>
+          <input type="text" readonly="readonly" value="pot">
+        </li>
+        <li>
+          <div class="icon icon-toilet"></div>
+          <input type="text" readonly="readonly" value="toilet">
+        </li>
+        <li>
+          <div class="icon icon-stove"></div>
+          <input type="text" readonly="readonly" value="stove">
+        </li>
+        <li>
+          <div class="icon icon-bedroom"></div>
+          <input type="text" readonly="readonly" value="bedroom">
+        </li>
+        <li>
+          <div class="icon icon-wall"></div>
+          <input type="text" readonly="readonly" value="wall">
+        </li>
+        <li>
+          <div class="icon icon-guard"></div>
+          <input type="text" readonly="readonly" value="guard">
+        </li>
+        <li>
+          <div class="icon icon-call-support"></div>
+          <input type="text" readonly="readonly" value="call-support">
+        </li>
+        <li>
+          <div class="icon icon-flat-plan"></div>
+          <input type="text" readonly="readonly" value="flat-plan">
+        </li>
+        <li>
+          <div class="icon icon-bus"></div>
+          <input type="text" readonly="readonly" value="bus">
+        </li>
+        <li>
+          <div class="icon icon-wrong-file"></div>
+          <input type="text" readonly="readonly" value="wrong-file">
+        </li>
+        <li>
+          <div class="icon icon-car"></div>
+          <input type="text" readonly="readonly" value="car">
+        </li>
+        <li>
+          <div class="icon icon-mog"></div>
+          <input type="text" readonly="readonly" value="mog">
+        </li>
+        <li>
+          <div class="icon icon-cook"></div>
+          <input type="text" readonly="readonly" value="cook">
+        </li>
+        <li>
+          <div class="icon icon-waredrop"></div>
+          <input type="text" readonly="readonly" value="waredrop">
+        </li>
+        <li>
+          <div class="icon icon-award"></div>
+          <input type="text" readonly="readonly" value="award">
+        </li>
+        <li>
+          <div class="icon icon-table-chair"></div>
+          <input type="text" readonly="readonly" value="table-chair">
+        </li>
+        <li>
+          <div class="icon icon-water-tap"></div>
+          <input type="text" readonly="readonly" value="water-tap">
+        </li>
+        <li>
+          <div class="icon icon-door"></div>
+          <input type="text" readonly="readonly" value="door">
+        </li>
+        <li>
+          <div class="icon icon-conference"></div>
+          <input type="text" readonly="readonly" value="conference">
+        </li>
+        <li>
+          <div class="icon icon-female"></div>
+          <input type="text" readonly="readonly" value="female">
+        </li>
+        <li>
+          <div class="icon icon-persons"></div>
+          <input type="text" readonly="readonly" value="persons">
+        </li>
+        <li>
+          <div class="icon icon-button"></div>
+          <input type="text" readonly="readonly" value="button">
+        </li>
+        <li>
+          <div class="icon icon-floor"></div>
+          <input type="text" readonly="readonly" value="floor">
+        </li>
+        <li>
+          <div class="icon icon-freeze"></div>
+          <input type="text" readonly="readonly" value="freeze">
+        </li>
+        <li>
+          <div class="icon icon-picture"></div>
+          <input type="text" readonly="readonly" value="picture">
+        </li>
+        <li>
+          <div class="icon icon-gas-line"></div>
+          <input type="text" readonly="readonly" value="gas-line">
+        </li>
+        <li>
+          <div class="icon icon-gym"></div>
+          <input type="text" readonly="readonly" value="gym">
+        </li>
+        <li>
+          <div class="icon icon-basin"></div>
+          <input type="text" readonly="readonly" value="basin">
+        </li>
+        <li>
+          <div class="icon icon-intercom"></div>
+          <input type="text" readonly="readonly" value="intercom">
+        </li>
+        <li>
+          <div class="icon icon-wifi"></div>
+          <input type="text" readonly="readonly" value="wifi">
+        </li>
+        <li>
+          <div class="icon icon-right-person"></div>
+          <input type="text" readonly="readonly" value="right-person">
+        </li>
+        <li>
+          <div class="icon icon-iron"></div>
+          <input type="text" readonly="readonly" value="iron">
+        </li>
+        <li>
+          <div class="icon icon-bathroom"></div>
+          <input type="text" readonly="readonly" value="bathroom">
+        </li>
+        <li>
+          <div class="icon icon-signal"></div>
+          <input type="text" readonly="readonly" value="signal">
+        </li>
+        <li>
+          <div class="icon icon-judgement"></div>
+          <input type="text" readonly="readonly" value="judgement">
+        </li>
+        <li>
+          <div class="icon icon-pack"></div>
+          <input type="text" readonly="readonly" value="pack">
+        </li>
+        <li>
+          <div class="icon icon-plate"></div>
+          <input type="text" readonly="readonly" value="plate">
+        </li>
+        <li>
+          <div class="icon icon-printer"></div>
+          <input type="text" readonly="readonly" value="printer">
+        </li>
+        <li>
+          <div class="icon icon-washing-mashine"></div>
+          <input type="text" readonly="readonly" value="washing-mashine">
+        </li>
+        <li>
+          <div class="icon icon-satelight"></div>
+          <input type="text" readonly="readonly" value="satelight">
+        </li>
+        <li>
+          <div class="icon icon-medical"></div>
+          <input type="text" readonly="readonly" value="medical">
+        </li>
+        <li>
+          <div class="icon icon-pond"></div>
+          <input type="text" readonly="readonly" value="pond">
+        </li>
+        <li>
+          <div class="icon icon-cooking"></div>
+          <input type="text" readonly="readonly" value="cooking">
+        </li>
+        <li>
+          <div class="icon icon-reading"></div>
+          <input type="text" readonly="readonly" value="reading">
+        </li>
+        <li>
+          <div class="icon icon-lift"></div>
+          <input type="text" readonly="readonly" value="lift">
+        </li>
+        <li>
+          <div class="icon icon-carbon-di-oxide"></div>
+          <input type="text" readonly="readonly" value="carbon-di-oxide">
+        </li>
+        <li>
+          <div class="icon icon-sofa-2"></div>
+          <input type="text" readonly="readonly" value="sofa-2">
+        </li>
+        <li>
+          <div class="icon icon-speaker"></div>
+          <input type="text" readonly="readonly" value="speaker">
+        </li>
+        <li>
+          <div class="icon icon-tissue"></div>
+          <input type="text" readonly="readonly" value="tissue">
+        </li>
+        <li>
+          <div class="icon icon-doctor"></div>
+          <input type="text" readonly="readonly" value="doctor">
+        </li>
+        <li>
+          <div class="icon icon-360"></div>
+          <input type="text" readonly="readonly" value="360">
+        </li>
+        <li>
+          <div class="icon icon-tv"></div>
+          <input type="text" readonly="readonly" value="tv">
+        </li>
+        <li>
+          <div class="icon icon-paper"></div>
+          <input type="text" readonly="readonly" value="paper">
+        </li>
+        <li>
+          <div class="icon icon-drum-stick"></div>
+          <input type="text" readonly="readonly" value="drum-stick">
+        </li>
+        <li>
+          <div class="icon icon-garage"></div>
+          <input type="text" readonly="readonly" value="garage">
+        </li>
+        <li>
+          <div class="icon icon-smoke-1"></div>
+          <input type="text" readonly="readonly" value="smoke-1">
+        </li>
+        <li>
+          <div class="icon icon-medicine"></div>
+          <input type="text" readonly="readonly" value="medicine">
+        </li>
+        <li>
+          <div class="icon icon-medicine-o"></div>
+          <input type="text" readonly="readonly" value="medicine-o">
+        </li>
+        <li>
+          <div class="icon icon-pellow"></div>
+          <input type="text" readonly="readonly" value="pellow">
+        </li>
+        <li>
+          <div class="icon icon-plane"></div>
+          <input type="text" readonly="readonly" value="plane">
+        </li>
+        <li>
+          <div class="icon icon-plane-o"></div>
+          <input type="text" readonly="readonly" value="plane-o">
+        </li>
+        <li>
+          <div class="icon icon-wheel-chair"></div>
+          <input type="text" readonly="readonly" value="wheel-chair">
+        </li>
+        <li>
+          <div class="icon icon-hot-water"></div>
+          <input type="text" readonly="readonly" value="hot-water">
+        </li>
+        <li>
+          <div class="icon icon-right-file"></div>
+          <input type="text" readonly="readonly" value="right-file">
+        </li>
+        <li>
+          <div class="icon icon-college"></div>
+          <input type="text" readonly="readonly" value="college">
+        </li>
+        <li>
+          <div class="icon icon-college-o"></div>
+          <input type="text" readonly="readonly" value="college-o">
+        </li>
+        <li>
+          <div class="icon icon-cc-camera"></div>
+          <input type="text" readonly="readonly" value="cc-camera">
+        </li>
+        <li>
+          <div class="icon icon-sarvent"></div>
+          <input type="text" readonly="readonly" value="sarvent">
+        </li>
+        <li>
+          <div class="icon icon-shopping"></div>
+          <input type="text" readonly="readonly" value="shopping">
+        </li>
+        <li>
+          <div class="icon icon-court"></div>
+          <input type="text" readonly="readonly" value="court">
+        </li>
+        <li>
+          <div class="icon icon-shower"></div>
+          <input type="text" readonly="readonly" value="shower">
+        </li>
+        <li>
+          <div class="icon icon-smoke"></div>
+          <input type="text" readonly="readonly" value="smoke">
+        </li>
+        <li>
+          <div class="icon icon-sofa-1"></div>
+          <input type="text" readonly="readonly" value="sofa-1">
+        </li>
+        <li>
+          <div class="icon icon-book-pen"></div>
+          <input type="text" readonly="readonly" value="book-pen">
+        </li>
+        <li>
+          <div class="icon icon-water-pool"></div>
+          <input type="text" readonly="readonly" value="water-pool">
+        </li>
+        <li>
+          <div class="icon icon-train"></div>
+          <input type="text" readonly="readonly" value="train">
+        </li>
+        <li>
+          <div class="icon icon-statistics"></div>
+          <input type="text" readonly="readonly" value="statistics">
+        </li>
+        <li>
+          <div class="icon icon-cloth"></div>
+          <input type="text" readonly="readonly" value="cloth">
+        </li>
+        <li>
+          <div class="icon icon-walk"></div>
+          <input type="text" readonly="readonly" value="walk">
+        </li>
+        <li>
+          <div class="icon icon-floor-clean"></div>
+          <input type="text" readonly="readonly" value="floor-clean">
+        </li>
+        <li>
+          <div class="icon icon-shape"></div>
+          <input type="text" readonly="readonly" value="shape">
+        </li>
+        <li>
+          <div class="icon icon-theater"></div>
+          <input type="text" readonly="readonly" value="theater">
+        </li>
+        <li>
+          <div class="icon icon-tree"></div>
+          <input type="text" readonly="readonly" value="tree">
+        </li>
+        <li>
+          <div class="icon icon-tree-o"></div>
+          <input type="text" readonly="readonly" value="tree-o">
+        </li>
+        <li>
+          <div class="icon icon-restaurant"></div>
+          <input type="text" readonly="readonly" value="restaurant">
+        </li>
+        <li>
+          <div class="icon icon-restaurant-o"></div>
+          <input type="text" readonly="readonly" value="restaurant-o">
+        </li>
+        <li>
+          <div class="icon icon-journey"></div>
+          <input type="text" readonly="readonly" value="journey">
+        </li>
+        <li>
+          <div class="icon icon-ac-1"></div>
+          <input type="text" readonly="readonly" value="ac-1">
+        </li>
+        <li>
+          <div class="icon icon-water-tape"></div>
+          <input type="text" readonly="readonly" value="water-tape">
+        </li>
+        <li>
+          <div class="icon icon-wallet"></div>
+          <input type="text" readonly="readonly" value="wallet">
+        </li>
+        <li>
+          <div class="icon icon-cleaner"></div>
+          <input type="text" readonly="readonly" value="cleaner">
+        </li>
+        <li>
+          <div class="icon icon-candle"></div>
+          <input type="text" readonly="readonly" value="candle">
+        </li>
+        <li>
+          <div class="icon icon-rank"></div>
+          <input type="text" readonly="readonly" value="rank">
+        </li>
+        <li>
+          <div class="icon icon-light"></div>
+          <input type="text" readonly="readonly" value="light">
+        </li>
+        <li>
+          <div class="icon icon-sales-campaign"></div>
+          <input type="text" readonly="readonly" value="sales-campaign">
+        </li>
+        <li>
+          <div class="icon icon-excercise"></div>
+          <input type="text" readonly="readonly" value="excercise">
+        </li>
+        <li>
+          <div class="icon icon-contract"></div>
+          <input type="text" readonly="readonly" value="contract">
+        </li>
+        <li>
+          <div class="icon icon-window"></div>
+          <input type="text" readonly="readonly" value="window">
+        </li>
+        <li>
+          <div class="icon icon-for-rent"></div>
+          <input type="text" readonly="readonly" value="for-rent">
+        </li>
+        <li>
+          <div class="icon icon-for-sale"></div>
+          <input type="text" readonly="readonly" value="for-sale">
+        </li>
+        <li>
+          <div class="icon icon-building"></div>
+          <input type="text" readonly="readonly" value="building">
+        </li>
+        <li>
+          <div class="icon icon-to-rent"></div>
+          <input type="text" readonly="readonly" value="to-rent">
+        </li>
+        <li>
+          <div class="icon icon-handshake"></div>
+          <input type="text" readonly="readonly" value="handshake">
+        </li>
+        <li>
+          <div class="icon icon-to-sale"></div>
+          <input type="text" readonly="readonly" value="to-sale">
+        </li>
+        <li>
+          <div class="icon icon-key"></div>
+          <input type="text" readonly="readonly" value="key">
+        </li>
+        <li>
+          <div class="icon icon-person-message"></div>
+          <input type="text" readonly="readonly" value="person-message">
+        </li>
+        <li>
+          <div class="icon icon-invest"></div>
+          <input type="text" readonly="readonly" value="invest">
+        </li>
+        <li>
+          <div class="icon icon-order"></div>
+          <input type="text" readonly="readonly" value="order">
+        </li>
+        <li>
+          <div class="icon icon-find-man"></div>
+          <input type="text" readonly="readonly" value="find-man">
+        </li>
+        <li>
+          <div class="icon icon-bed-d"></div>
+          <input type="text" readonly="readonly" value="bed-d">
+        </li>
+        <li>
+          <div class="icon icon-bath-d"></div>
+          <input type="text" readonly="readonly" value="bath-d">
+        </li>
+        <li>
+          <div class="icon icon-garden"></div>
+          <input type="text" readonly="readonly" value="garden">
+        </li>
+        <li>
+          <div class="icon icon-garage-1"></div>
+          <input type="text" readonly="readonly" value="garage-1">
+        </li>
+        <li>
+          <div class="icon icon-cross-circle"></div>
+          <input type="text" readonly="readonly" value="cross-circle">
+        </li>
+        <li>
+          <div class="icon icon-drop"></div>
+          <input type="text" readonly="readonly" value="drop">
+        </li>
+        <li>
+          <div class="icon icon-cofee-maker"></div>
+          <input type="text" readonly="readonly" value="cofee-maker">
+        </li>
+        <li>
+          <div class="icon icon-foot-print"></div>
+          <input type="text" readonly="readonly" value="foot-print">
+        </li>
+        <li>
+          <div class="icon icon-foot-print-c"></div>
+          <input type="text" readonly="readonly" value="foot-print-c">
+        </li>
+        <li>
+          <div class="icon icon-shop"></div>
+          <input type="text" readonly="readonly" value="shop">
+        </li>
+        <li>
+          <div class="icon icon-sale"></div>
+          <input type="text" readonly="readonly" value="sale">
+        </li>
+        <li>
+          <div class="icon icon-rent"></div>
+          <input type="text" readonly="readonly" value="rent">
+        </li>
+        <li>
+          <div class="icon icon-sold"></div>
+          <input type="text" readonly="readonly" value="sold">
+        </li>
+        <li>
+          <div class="icon icon-find-home"></div>
+          <input type="text" readonly="readonly" value="find-home">
+        </li>
+        <li>
+          <div class="icon icon-find-people"></div>
+          <input type="text" readonly="readonly" value="find-people">
+        </li>
+        <li>
+          <div class="icon icon-pool"></div>
+          <input type="text" readonly="readonly" value="pool">
+        </li>
+        <li>
+          <div class="icon icon-foot-print-o"></div>
+          <input type="text" readonly="readonly" value="foot-print-o">
+        </li>
+        <li>
+          <div class="icon icon-correct-1"></div>
+          <input type="text" readonly="readonly" value="correct-1">
+        </li>
+        <li>
+          <div class="icon icon-plumber"></div>
+          <input type="text" readonly="readonly" value="plumber">
+        </li>
+        <li>
+          <div class="icon icon-temple"></div>
+          <input type="text" readonly="readonly" value="temple">
+        </li>
+        <li>
+          <div class="icon icon-rotate"></div>
+          <input type="text" readonly="readonly" value="rotate">
+        </li>
+        <li>
+          <div class="icon icon-rest"></div>
+          <input type="text" readonly="readonly" value="rest">
+        </li>
+        <li>
+          <div class="icon icon-security-guard"></div>
+          <input type="text" readonly="readonly" value="security-guard">
+        </li>
+        <li>
+          <div class="icon icon-ibaax-font-5"></div>
+          <input type="text" readonly="readonly" value="ibaax-font-5">
+        </li>
+      </ul>
+      <h2>Character mapping</h2>
+      <ul class="glyphs character-mapping">
+        <li>
+          <div data-icon="&#x700;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x700;">
+        </li>
+        <li>
+          <div data-icon="&#x701;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x701;">
+        </li>
+        <li>
+          <div data-icon="&#x702;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x702;">
+        </li>
+        <li>
+          <div data-icon="&#x703;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x703;">
+        </li>
+        <li>
+          <div data-icon="&#x704;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x704;">
+        </li>
+        <li>
+          <div data-icon="&#x705;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x705;">
+        </li>
+        <li>
+          <div data-icon="&#x706;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x706;">
+        </li>
+        <li>
+          <div data-icon="&#x707;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x707;">
+        </li>
+        <li>
+          <div data-icon="&#x708;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x708;">
+        </li>
+        <li>
+          <div data-icon="&#x709;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x709;">
+        </li>
+        <li>
+          <div data-icon="&#x710;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x710;">
+        </li>
+        <li>
+          <div data-icon="&#x711;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x711;">
+        </li>
+        <li>
+          <div data-icon="&#x712;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x712;">
+        </li>
+        <li>
+          <div data-icon="&#x713;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x713;">
+        </li>
+        <li>
+          <div data-icon="&#x714;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x714;">
+        </li>
+        <li>
+          <div data-icon="&#x715;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x715;">
+        </li>
+        <li>
+          <div data-icon="&#x716;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x716;">
+        </li>
+        <li>
+          <div data-icon="&#x717;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x717;">
+        </li>
+        <li>
+          <div data-icon="&#x718;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x718;">
+        </li>
+        <li>
+          <div data-icon="&#x719;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x719;">
+        </li>
+        <li>
+          <div data-icon="&#x720;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x720;">
+        </li>
+        <li>
+          <div data-icon="&#x721;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x721;">
+        </li>
+        <li>
+          <div data-icon="&#x722;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x722;">
+        </li>
+        <li>
+          <div data-icon="&#x723;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x723;">
+        </li>
+        <li>
+          <div data-icon="&#x724;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x724;">
+        </li>
+        <li>
+          <div data-icon="&#x725;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x725;">
+        </li>
+        <li>
+          <div data-icon="&#x726;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x726;">
+        </li>
+        <li>
+          <div data-icon="&#x727;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x727;">
+        </li>
+        <li>
+          <div data-icon="&#x728;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x728;">
+        </li>
+        <li>
+          <div data-icon="&#x729;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x729;">
+        </li>
+        <li>
+          <div data-icon="&#x730;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x730;">
+        </li>
+        <li>
+          <div data-icon="&#x731;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x731;">
+        </li>
+        <li>
+          <div data-icon="&#x732;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x732;">
+        </li>
+        <li>
+          <div data-icon="&#x733;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x733;">
+        </li>
+        <li>
+          <div data-icon="&#x734;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x734;">
+        </li>
+        <li>
+          <div data-icon="&#x735;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x735;">
+        </li>
+        <li>
+          <div data-icon="&#x736;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x736;">
+        </li>
+        <li>
+          <div data-icon="&#x737;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x737;">
+        </li>
+        <li>
+          <div data-icon="&#x738;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x738;">
+        </li>
+        <li>
+          <div data-icon="&#x739;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x739;">
+        </li>
+        <li>
+          <div data-icon="&#x740;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x740;">
+        </li>
+        <li>
+          <div data-icon="&#x741;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x741;">
+        </li>
+        <li>
+          <div data-icon="&#x742;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x742;">
+        </li>
+        <li>
+          <div data-icon="&#x743;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x743;">
+        </li>
+        <li>
+          <div data-icon="&#x744;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x744;">
+        </li>
+        <li>
+          <div data-icon="&#x745;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x745;">
+        </li>
+        <li>
+          <div data-icon="&#x746;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x746;">
+        </li>
+        <li>
+          <div data-icon="&#x747;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x747;">
+        </li>
+        <li>
+          <div data-icon="&#x748;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x748;">
+        </li>
+        <li>
+          <div data-icon="&#x749;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x749;">
+        </li>
+        <li>
+          <div data-icon="&#x750;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x750;">
+        </li>
+        <li>
+          <div data-icon="&#x751;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x751;">
+        </li>
+        <li>
+          <div data-icon="&#x752;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x752;">
+        </li>
+        <li>
+          <div data-icon="&#x753;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x753;">
+        </li>
+        <li>
+          <div data-icon="&#x754;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x754;">
+        </li>
+        <li>
+          <div data-icon="&#x755;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x755;">
+        </li>
+        <li>
+          <div data-icon="&#x756;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x756;">
+        </li>
+        <li>
+          <div data-icon="&#x757;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x757;">
+        </li>
+        <li>
+          <div data-icon="&#x758;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x758;">
+        </li>
+        <li>
+          <div data-icon="&#x759;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x759;">
+        </li>
+        <li>
+          <div data-icon="&#x760;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x760;">
+        </li>
+        <li>
+          <div data-icon="&#x761;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x761;">
+        </li>
+        <li>
+          <div data-icon="&#x762;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x762;">
+        </li>
+        <li>
+          <div data-icon="&#x763;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x763;">
+        </li>
+        <li>
+          <div data-icon="&#x764;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x764;">
+        </li>
+        <li>
+          <div data-icon="&#x765;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x765;">
+        </li>
+        <li>
+          <div data-icon="&#x766;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x766;">
+        </li>
+        <li>
+          <div data-icon="&#x767;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x767;">
+        </li>
+        <li>
+          <div data-icon="&#x768;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x768;">
+        </li>
+        <li>
+          <div data-icon="&#x769;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x769;">
+        </li>
+        <li>
+          <div data-icon="&#x770;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x770;">
+        </li>
+        <li>
+          <div data-icon="&#x771;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x771;">
+        </li>
+        <li>
+          <div data-icon="&#x772;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x772;">
+        </li>
+        <li>
+          <div data-icon="&#x773;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x773;">
+        </li>
+        <li>
+          <div data-icon="&#x774;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x774;">
+        </li>
+        <li>
+          <div data-icon="&#x775;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x775;">
+        </li>
+        <li>
+          <div data-icon="&#x776;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x776;">
+        </li>
+        <li>
+          <div data-icon="&#x777;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x777;">
+        </li>
+        <li>
+          <div data-icon="&#x778;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x778;">
+        </li>
+        <li>
+          <div data-icon="&#x779;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x779;">
+        </li>
+        <li>
+          <div data-icon="&#x781;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x781;">
+        </li>
+        <li>
+          <div data-icon="&#x782;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x782;">
+        </li>
+        <li>
+          <div data-icon="&#x783;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x783;">
+        </li>
+        <li>
+          <div data-icon="&#x784;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x784;">
+        </li>
+        <li>
+          <div data-icon="&#x785;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x785;">
+        </li>
+        <li>
+          <div data-icon="&#x786;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x786;">
+        </li>
+        <li>
+          <div data-icon="&#x787;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x787;">
+        </li>
+        <li>
+          <div data-icon="&#x788;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x788;">
+        </li>
+        <li>
+          <div data-icon="&#x789;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x789;">
+        </li>
+        <li>
+          <div data-icon="&#x790;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x790;">
+        </li>
+        <li>
+          <div data-icon="&#x791;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x791;">
+        </li>
+        <li>
+          <div data-icon="&#x792;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x792;">
+        </li>
+        <li>
+          <div data-icon="&#x793;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x793;">
+        </li>
+        <li>
+          <div data-icon="&#x794;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x794;">
+        </li>
+        <li>
+          <div data-icon="&#x795;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x795;">
+        </li>
+        <li>
+          <div data-icon="&#x796;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x796;">
+        </li>
+        <li>
+          <div data-icon="&#x797;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x797;">
+        </li>
+        <li>
+          <div data-icon="&#xe08a;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#xe08a;">
+        </li>
+        <li>
+          <div data-icon="&#x799;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x799;">
+        </li>
+        <li>
+          <div data-icon="&#x800;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x800;">
+        </li>
+        <li>
+          <div data-icon="&#x801;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x801;">
+        </li>
+        <li>
+          <div data-icon="&#x802;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x802;">
+        </li>
+        <li>
+          <div data-icon="&#x803;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x803;">
+        </li>
+        <li>
+          <div data-icon="&#x804;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x804;">
+        </li>
+        <li>
+          <div data-icon="&#x805;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x805;">
+        </li>
+        <li>
+          <div data-icon="&#x806;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x806;">
+        </li>
+        <li>
+          <div data-icon="&#x807;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x807;">
+        </li>
+        <li>
+          <div data-icon="&#x808;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x808;">
+        </li>
+        <li>
+          <div data-icon="&#x809;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x809;">
+        </li>
+        <li>
+          <div data-icon="&#x810;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x810;">
+        </li>
+        <li>
+          <div data-icon="&#x811;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x811;">
+        </li>
+        <li>
+          <div data-icon="&#x812;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x812;">
+        </li>
+        <li>
+          <div data-icon="&#x813;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x813;">
+        </li>
+        <li>
+          <div data-icon="&#x814;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x814;">
+        </li>
+        <li>
+          <div data-icon="&#x8815;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x8815;">
+        </li>
+        <li>
+          <div data-icon="&#x816;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x816;">
+        </li>
+        <li>
+          <div data-icon="&#x817;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x817;">
+        </li>
+        <li>
+          <div data-icon="&#x818;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x818;">
+        </li>
+        <li>
+          <div data-icon="&#x819;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x819;">
+        </li>
+        <li>
+          <div data-icon="&#x820;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x820;">
+        </li>
+        <li>
+          <div data-icon="&#x821;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x821;">
+        </li>
+        <li>
+          <div data-icon="&#x822;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x822;">
+        </li>
+        <li>
+          <div data-icon="&#x823;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x823;">
+        </li>
+        <li>
+          <div data-icon="&#x824;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x824;">
+        </li>
+        <li>
+          <div data-icon="&#x825;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x825;">
+        </li>
+        <li>
+          <div data-icon="&#x826;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x826;">
+        </li>
+        <li>
+          <div data-icon="&#x827;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x827;">
+        </li>
+        <li>
+          <div data-icon="&#x828;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x828;">
+        </li>
+        <li>
+          <div data-icon="&#x829;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x829;">
+        </li>
+        <li>
+          <div data-icon="&#x830;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x830;">
+        </li>
+        <li>
+          <div data-icon="&#x831;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x831;">
+        </li>
+        <li>
+          <div data-icon="&#x832;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x832;">
+        </li>
+        <li>
+          <div data-icon="&#x833;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x833;">
+        </li>
+        <li>
+          <div data-icon="&#x834;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x834;">
+        </li>
+        <li>
+          <div data-icon="&#x835;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x835;">
+        </li>
+        <li>
+          <div data-icon="&#x836;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x836;">
+        </li>
+        <li>
+          <div data-icon="&#x837;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x837;">
+        </li>
+        <li>
+          <div data-icon="&#x838;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x838;">
+        </li>
+        <li>
+          <div data-icon="&#x839;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x839;">
+        </li>
+        <li>
+          <div data-icon="&#x840;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x840;">
+        </li>
+        <li>
+          <div data-icon="&#x841;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x841;">
+        </li>
+        <li>
+          <div data-icon="&#x842;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x842;">
+        </li>
+        <li>
+          <div data-icon="&#x843;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x843;">
+        </li>
+        <li>
+          <div data-icon="&#x844;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x844;">
+        </li>
+        <li>
+          <div data-icon="&#x845;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x845;">
+        </li>
+        <li>
+          <div data-icon="&#x846;" class="icon"></div>
+          <input type="text" readonly="readonly" value="&amp;#x846;">
+        </li>
+      </ul>
+    </div><script type="text/javascript">
+    (function() {
+      var glyphs, _i, _len, _ref;
+
+      _ref = document.getElementsByClassName('glyphs');
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        glyphs = _ref[_i];
+        glyphs.addEventListener('click', function(event) {
+          if (event.target.tagName === 'INPUT') {
+            return event.target.select();
+          }
+        });
+      }
+
+    }).call(this);
+    </script>
+  </body>
+</html>
